@@ -1,10 +1,20 @@
 import { Star } from "lucide-react";
+import { useNavigate } from "react-router";
 
 const Book = ({ book }) => {
-  const { bookName, author, image, rating, category, tags } = book;
+  const navigate = useNavigate();
+
+  const { bookId, bookName, author, image, rating, category, tags } = book;
+
+  const handleOnClick = () => {
+    navigate(`/book-details/${bookId}`);
+  };
 
   return (
-    <div className="border border-[#13131326] rounded-2xl p-6">
+    <div
+      onClick={handleOnClick}
+      className="border border-[#13131326] rounded-2xl p-6 cursor-pointer hover:shadow-lg"
+    >
       <div className="h-64  bg-[#F3F3F3] rounded-2xl flex justify-center items-center mb-2">
         <img className="h-48 " src={image} alt="" />
       </div>
