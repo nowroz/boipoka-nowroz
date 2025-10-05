@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="container mx-auto my-12 px-4 ">
       <section className="flex justify-between items-center">
         <h3 className="font-work-sans text-3xl font-bold text-[#131313]">
-          Book Vibe
+          BoiPoka
         </h3>
         <ul className="flex gap-8 items-center">
           <NavigationLink path="/" innerText="Home"></NavigationLink>
