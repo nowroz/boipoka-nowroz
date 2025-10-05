@@ -19,10 +19,10 @@ const Navbar = () => {
           ></NavigationLink>
         </ul>
         <div className="flex items-center gap-4">
-          <button className="font-work-sans text-base font-semibold text-white bg-[#23BE0A] px-5 py-3 rounded-lg">
+          <button className="font-work-sans text-base font-semibold text-white bg-[#23BE0A] px-5 py-3 rounded-lg cursor-pointer active:scale-95">
             Sign In
           </button>
-          <button className="font-work-sans text-base font-semibold text-white bg-[#59C6D2] px-5 py-3 rounded-lg">
+          <button className="font-work-sans text-base font-semibold text-white bg-[#59C6D2] px-5 py-3 rounded-lg cursor-pointer active:scale-95">
             Sign Up
           </button>
         </div>
