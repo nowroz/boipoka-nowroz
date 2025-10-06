@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router";
+import { addReadBookToLocalStorage as addReadBook } from "../../utils/storage";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -18,6 +19,10 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = book;
+
+  const handleMarkAsReadButtonClick = (bookId) => {
+    addReadBook(bookId);
+  };
 
   return (
     <main className="container mx-auto px-4">
@@ -86,7 +91,10 @@ const BookDetails = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <button className="font-work-sans text-base font-semibold text-[#131313]  px-7 py-4 border border-[#1313134d] rounded-lg cursor-pointer active:scale-95">
+            <button
+              onClick={() => handleMarkAsReadButtonClick(bookId)}
+              className="font-work-sans text-base font-semibold text-[#131313]  px-7 py-4 border border-[#1313134d] rounded-lg cursor-pointer active:scale-95"
+            >
               Mark as Read
             </button>
             <button className="font-work-sans text-base font-semibold text-white bg-[#59C6D2] px-7 py-4 rounded-lg cursor-pointer active:scale-95">
