@@ -1,3 +1,8 @@
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
+
 const key = "readBooks";
 
 const getReadBooksFromLocalStorage = () => {
@@ -16,7 +21,11 @@ const addReadBookToLocalStorage = (bookId) => {
   const readBooks = getReadBooksFromLocalStorage();
 
   if (readBooks.includes(bookId)) {
-    alert("This book is already added as read!");
+    MySwal.fire({
+      title: "Slow Down!",
+      text: "This book is already marked as read.",
+      icon: "info",
+    });
     return;
   }
 
