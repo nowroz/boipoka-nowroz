@@ -87,7 +87,7 @@ const BookDetails = () => {
           </div>
           <div className="flex items-center gap-4">
             <button className="font-work-sans text-base font-semibold text-[#131313]  px-7 py-4 border border-[#1313134d] rounded-lg cursor-pointer active:scale-95">
-              Read
+              Mark as Read
             </button>
             <button className="font-work-sans text-base font-semibold text-white bg-[#59C6D2] px-7 py-4 rounded-lg cursor-pointer active:scale-95">
               Wishlist
