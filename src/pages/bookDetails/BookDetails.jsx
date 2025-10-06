@@ -21,7 +21,7 @@ const BookDetails = () => {
   } = book;
 
   const handleMarkAsReadButtonClick = (bookId) => {
-    addReadBook(bookId);
+    addReadBook(parseInt(bookId));
   };
 
   return (
